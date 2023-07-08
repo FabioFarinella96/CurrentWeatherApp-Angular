@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
+![image](https://github.com/FabioFarinella96/CurrentWeatherApp-Angular/assets/121029029/8c98206a-3a40-47b8-8f58-0b4e6b6ff464)   ![image](https://github.com/FabioFarinella96/CurrentWeatherApp-Angular/assets/121029029/ae086bdf-699b-4df7-8913-8b8ea70b0edc)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
