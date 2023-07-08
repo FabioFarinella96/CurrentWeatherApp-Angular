@@ -1,0 +1,47 @@
+<div class="container">
+  <section class="content">
+    <mat-card class="example-card">
+      <mat-card-actions>
+        <a routerLink="/">Come back</a>
+        <form class="form" #cityForm="ngForm" (ngSubmit)="onSubmit()">
+          <input
+            class="input"
+            type="text"
+            name="city"
+            placeholder="Search for a city"
+            ngModel
+            required
+            [(ngModel)]="value"
+          />
+          <button class="button" mat-raised-button>Go</button>
+        </form>
+        <h1
+          class="weather_content__title"
+          *ngIf="weather.location && weather.current"
+        >
+          Today's Report
+        </h1>
+        <mat-card-content class="weather_content">
+          <div *ngIf="weather.location && weather.current">
+            <h2>Current Weather in {{ weather.location.name }}</h2>
+            <div [ngSwitch]="weather.current.condition.text">
+              <img
+                *ngSwitchDefault
+                [src]="getWeatherIcon(weather.current.condition.text)"
+                alt="weather icon"
+              />
+            </div>
+            <h2 class="temperature">{{ weather.current.temp_c }}°</h2>
+            <p class="condition">{{ weather.current.condition.text }}</p>
+          </div>
+        </mat-card-content>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-progress-bar
+          *ngIf="!weather.location"
+          mode="indeterminate"
+        ></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+  </section>
+</div>
