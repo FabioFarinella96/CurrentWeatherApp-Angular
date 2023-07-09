@@ -52,14 +52,12 @@ export class ContentComponent {
 
     this.http
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=52d462a7ec0644c6941125741230607&q=${cityName}`
+        `https://api.weatherapi.com/v1/current.json?key=52d462a7ec0644c6941125741230607&q=${cityName}`
       )
       .subscribe((res) => {
         this.weather = res;
-        console.log(this.weather);
       });
 
-    console.log(this.cityForm);
     this.value = '';
   }
 }
